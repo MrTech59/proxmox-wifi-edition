@@ -80,7 +80,7 @@ for f in /sys/class/dmi/id/sys_vendor /sys/class/dmi/id/product_name \
 done
 if have hostnamectl; then
   printf '\n-- hostnamectl (static hardware/OS fields) --\n'
-  hostnamectl 2>/dev/null | sed -n -E '/^(Static hostname|Icon name|Chassis|Machine ID|Boot ID|Virtualization|Operating System|Kernel|Architecture):/p' || true
+  hostnamectl 2>/dev/null | sed -n -E '/^(Static hostname|Icon name|Chassis|Virtualization|Operating System|Kernel|Architecture):/p' || true
 fi
 
 section "Operating system"
